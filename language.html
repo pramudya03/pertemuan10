@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Piramida Bintang</title>
+</head>
+<body>
+    <script type="text/javascript">
+        // Minta input tinggi piramida dari pengguna
+        var nilai_prompt = prompt("Tinggi: ", 5);
+
+        // Ubah nilai input menjadi integer
+        var tinggi = parseInt(nilai_prompt);
+
+        // Loop untuk setiap baris piramida
+        for (var baris = 1; baris <= tinggi; baris++) {
+            // Buat sejumlah spasi
+            for (var i = 1; i <= tinggi - baris; i++) {
+                document.write("&nbsp;&nbsp;"); // Karakter spasi
+            }
+            // Tampilkan bintang
+            for (var j = 1; j <= 2 * baris - 1; j++) {
+                document.write("*");
+            }
+            // Pindah ke baris berikutnya
+            document.write("<br>");
+        }
+    </script>
+</body>
+</html>
